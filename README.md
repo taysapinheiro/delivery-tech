@@ -1,124 +1,86 @@
-# 🚀 Qualifica SP – API de Delivery
+# 📦 DeliveryTech API
 
-Projeto desenvolvido como parte da **Formação em Arquitetura de Sistemas – Qualifica SP**.
-
-Este repositório contém a construção de uma **API REST em Java 21**, voltada para um **sistema de delivery**, aplicando boas práticas de arquitetura, organização de código e princípios modernos de desenvolvimento backend.
+API RESTful desenvolvida com Spring Boot 3 e Java 21 para gerenciar um sistema de delivery completo. Este projeto simula as funcionalidades principais de plataformas como iFood e Uber Eats, incluindo autenticação JWT, cache, monitoramento, CI/CD e muito mais.
 
 ---
 
-## 📌 Objetivo do Projeto
+## 🚀 Funcionalidades
 
-O objetivo deste projeto é consolidar os conhecimentos adquiridos na formação, abordando:
-
-* Arquitetura de sistemas
-* Boas práticas de desenvolvimento backend
-* Criação de APIs escaláveis e bem estruturadas
-* Separação de responsabilidades
-* Preparação para cenários reais de mercado
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-* **Java 21**
-* **Spring Boot**
-* **Spring Web**
-* **Spring Data JPA**
-* **Banco de Dados** (H2 / PostgreSQL / MySQL – a definir)
-* **Maven**
+- Cadastro e login de usuários com JWT
+- Controle de acesso por perfis (CLIENTE, RESTAURANTE, ADMIN, ENTREGADOR)
+- Cadastro de clientes, restaurantes, produtos e pedidos
+- Listagem de produtos por restaurante
+- Criação de pedidos com itens e cálculo do total
+- Atualização de status de pedido
+- Cache com Spring Cache
+- Testes automatizados com JUnit e Mockito
+- Documentação com Swagger/OpenAPI
+- Banco de dados em memória com H2
+- Containerização com Docker e orquestração com Docker Compose
+- Pipeline CI/CD com GitHub Actions (sugestão)
 
 ---
 
-## 🧱 Arquitetura
+## 🧪 Tecnologias Utilizadas
 
-O projeto segue princípios de **arquitetura em camadas**, podendo evoluir para modelos como:
-
-* Clean Architecture
-* Hexagonal (Ports and Adapters)
-
-### Camadas principais:
-
-* **Controller** – Exposição dos endpoints REST
-* **Service** – Regras de negócio
-* **Repository** – Persistência de dados
-* **Domain / Entity** – Modelos de domínio
-* **DTOs** – Transferência de dados
+- Java 21
+- Spring Boot 3.2.x
+- Spring Data JPA
+- Spring Security + JWT
+- Spring Validation
+- H2 Database
+- SpringDoc OpenAPI (Swagger)
+- Docker + Docker Compose
+- JUnit 5 + Mockito
 
 ---
 
-## 📦 Funcionalidades (em evolução)
+## 📄 Documentação da API
 
-* Cadastro de usuários
-* Cadastro de estabelecimentos
-* Cadastro de produtos
-* Realização de pedidos
-* Atualização de status do pedido
-* Integração com meios de pagamento (futuro)
+Acesse via Swagger:
+
+```
+http://localhost:8080/swagger-ui.html
+```
 
 ---
 
-## ▶️ Como Executar o Projeto
+## ⚙️ Como Rodar o Projeto
 
-### Pré-requisitos
+### 🔧 Pré-requisitos
 
-* Java 21 instalado
-* Maven
-* Git
+- Java 21
+- Maven
+- Docker e Docker Compose (opcional)
 
-### Passos
+### 🖥️ Via Maven
 
 ```bash
-# Clonar o repositório
-git clone https://github.com/seu-usuario/qualifica-sp.git
-
-# Entrar no diretório
-cd qualifica-sp
-
-# Executar a aplicação
-mvn spring-boot:run
+git clone https://github.com/seuusuario/delivery-api.git
+cd delivery-api
+./mvnw spring-boot:run
 ```
 
-A API estará disponível em:
-
-```
-http://localhost:8080
-```
-
----
-
-## 🧪 Testes
-
-Para executar os testes:
+### 🐳 Via Docker
 
 ```bash
-mvn test
+docker-compose up --build
 ```
 
 ---
 
-## 📚 Aprendizados Aplicados
+## 🧪 Endpoints de Teste
 
-* Modelagem de domínio
-* Boas práticas REST
-* Princípios SOLID
-* Organização de projetos Java
-* Versionamento com Git
-
----
-
-## 🎓 Formação
-
-Projeto desenvolvido durante a **Formação em Arquitetura de Sistemas – Qualifica SP**.
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `GET /api/clientes`
+- `POST /api/pedidos`
 
 ---
 
-## 👩‍💻 Autora
-
-**Taysa Mendes**
-Desenvolvedora Backend / Full Stack
 
 ---
 
-## 📄 Licença
+## 📬 Contato
 
-Este projeto é apenas para fins educacionais.
+[Seu Email] - [LinkedIn] - [GitHub]
